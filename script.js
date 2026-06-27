@@ -1,1 +1,1 @@
-console.log("Website Loaded");
+// JavaScript will be added later
