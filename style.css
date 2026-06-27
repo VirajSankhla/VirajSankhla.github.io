@@ -1,9 +1,4 @@
-/* =========================================================
-   VIRAJ SANKHLA | PERSONAL FINANCE WEBSITE
-   Design System: Navy / Gold / Slate
-   ========================================================= */
 
-/* --- TOKENS --- */
 :root {
   --navy:          #0B1C3D;
   --navy-mid:      #122347;
@@ -95,17 +90,17 @@ ul { list-style: none; }
 }
 
 .nav-monogram {
-  width: 34px;
+  width: 40px;
   height: 34px;
   background: var(--gold);
   color: var(--navy);
   border-radius: var(--radius-sm);
   font-family: var(--font-serif);
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 400;
   flex-shrink: 0;
 }
@@ -140,6 +135,15 @@ ul { list-style: none; }
 
 .nav-links a.active {
   color: var(--gold);
+}
+
+.nav-linkedin {
+  color: var(--slate-light) !important;
+}
+
+.nav-linkedin:hover {
+  color: var(--white) !important;
+  background: rgba(255,255,255,0.07) !important;
 }
 
 .nav-cta {
@@ -523,6 +527,14 @@ ul { list-style: none; }
   color: var(--slate-light);
 }
 
+.tl-duration {
+  font-size: 10px;
+  color: rgba(201,168,76,0.6);
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+  display: block;
+}
+
 .tl-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -615,111 +627,56 @@ ul { list-style: none; }
 }
 
 /* =========================================================
-   RESEARCH GRID
+   RESEARCH EMPTY STATE
    ========================================================= */
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.research-empty {
+  border: 1px dashed var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: 72px 40px;
+  text-align: center;
+  background: var(--white);
 }
 
-.research-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 28px 24px;
-  transition: all var(--transition);
+.empty-icon {
+  color: var(--slate-light);
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
-  min-height: 200px;
-}
-
-.research-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-dark);
-  transform: translateY(-2px);
-}
-
-.research-card--placeholder {
-  border-style: dashed;
-  border-color: var(--border);
-  background: var(--white);
-}
-
-.research-card--placeholder:hover {
-  border-style: solid;
-  border-color: var(--gold);
-  background: var(--white);
-}
-
-.research-card--add {
-  border: 1px dashed var(--border);
-  background: var(--bg-alt);
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.rc-add-inner {
-  text-align: center;
-  color: var(--slate-light);
-}
-
-.rc-add-icon {
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 1;
-  margin-bottom: 10px;
-  color: var(--border-dark);
-}
-
-.rc-add-text {
-  font-size: 13px;
-  line-height: 1.5;
-  max-width: 160px;
-}
-
-.rc-type {
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--gold-muted);
-  margin-bottom: 10px;
-}
-
-.rc-title {
-  font-size: 16px;
-  font-weight: 600;
+.empty-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
   color: var(--navy);
-  margin-bottom: 10px;
-  line-height: 1.35;
+  margin-bottom: 12px;
 }
 
-.rc-desc {
-  font-size: 13.5px;
+.empty-text {
+  font-size: 14.5px;
   color: var(--text-muted);
-  line-height: 1.65;
-  flex: 1;
+  max-width: 440px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
 }
 
-.rc-footer {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
+.empty-tags {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.rc-status {
+.empty-tag {
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--slate);
-  background: var(--bg-alt);
-  padding: 3px 8px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
+  color: var(--slate);
+  background: var(--off-white);
 }
 
 /* =========================================================
@@ -772,59 +729,17 @@ ul { list-style: none; }
   color: var(--gold);
 }
 
-/* =========================================================
-   CONTACT
-   ========================================================= */
-.contact-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-top: 8px;
-}
-
-.contact-link {
-  display: grid;
-  grid-template-columns: 80px 1fr 20px;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: all var(--transition);
-}
-
-.contact-link:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(201,168,76,0.3);
-}
-
-.cl-label {
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--gold-muted);
-}
-
-.cl-value {
-  font-size: 14px;
-  color: var(--slate-light);
-}
-
-.cl-arrow {
+/* footer linkedin */
+.footer-linkedin {
+  font-size: 12px;
   color: var(--gold);
-  font-size: 16px;
-  text-align: right;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+  transition: color var(--transition);
 }
 
-.contact-link:hover .cl-value {
-  color: var(--white);
+.footer-linkedin:hover {
+  color: #dab84f;
 }
 
 /* =========================================================
@@ -884,11 +799,6 @@ ul { list-style: none; }
 
   .edu-divider {
     display: none;
-  }
-
-  .contact-inner {
-    grid-template-columns: 1fr;
-    gap: 48px;
   }
 
   .timeline::before {
@@ -978,10 +888,6 @@ ul { list-style: none; }
     padding: 64px 0;
   }
 
-  .contact-link {
-    grid-template-columns: 64px 1fr 16px;
-    gap: 12px;
-  }
 }
 
 @media (max-width: 400px) {

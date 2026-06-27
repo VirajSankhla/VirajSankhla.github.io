@@ -1,3 +1,5 @@
+
+// --- Mobile nav toggle ---
 const navToggle = document.getElementById('navToggle');
 const navLinks  = document.getElementById('navLinks');
 
@@ -7,7 +9,6 @@ if (navToggle && navLinks) {
     navToggle.setAttribute('aria-expanded', open);
   });
 
-  // Close on link click
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -17,14 +18,13 @@ if (navToggle && navLinks) {
 }
 
 // --- Active nav link on scroll ---
-const sections = document.querySelectorAll('section[id]');
+const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
 function updateActiveNav() {
   let current = '';
   sections.forEach(section => {
-    const top = section.offsetTop - 90;
-    if (window.scrollY >= top) {
+    if (window.scrollY >= section.offsetTop - 90) {
       current = section.getAttribute('id');
     }
   });
@@ -41,18 +41,17 @@ updateActiveNav();
 
 // --- Fade-in on scroll ---
 const fadeEls = document.querySelectorAll(
-  '.tl-item, .research-card, .skill-group, .edu-card, .contact-link'
+  '.tl-item, .skill-group, .edu-card, .research-empty'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-in'));
 
 const observer = new IntersectionObserver(
   entries => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 60 * (entry.target.dataset.delay || 0));
+        const delay = parseInt(entry.target.dataset.delay || 0);
+        setTimeout(() => entry.target.classList.add('visible'), 60 * delay);
         observer.unobserve(entry.target);
       }
     });
@@ -63,11 +62,6 @@ const observer = new IntersectionObserver(
 fadeEls.forEach((el, i) => {
   el.dataset.delay = i % 4;
   observer.observe(el);
-});
-
-// --- Stagger siblings in grid ---
-document.querySelectorAll('.research-grid .research-card').forEach((card, i) => {
-  card.dataset.delay = i;
 });
 
 document.querySelectorAll('.skills-grid .skill-group').forEach((g, i) => {

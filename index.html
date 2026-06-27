@@ -3,95 +3,307 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Viraj Sankhla</title>
+  <title>Viraj Patel Sankhla | Investment &amp; Financial Risk</title>
+  <meta name="description" content="Viraj Patel Sankhla - MSc Investment and Financial Risk Management, University of Westminster. Aspiring equity research and investment analyst." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <style>
-    .page-hero {
-      background: var(--navy);
-      padding: 120px 0 64px;
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- NAV -->
+  <header class="site-header" id="top">
     <nav class="navbar">
       <div class="nav-logo">
-        <span class="nav-monogram">VS</span>
-        <span class="nav-name">Viraj Sankhla</span>
+        <span class="nav-monogram">VPS</span>
+        <span class="nav-name">Viraj Patel Sankhla</span>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#experience">Experience</a></li>
-        <li><a href="../research/index.html">Research</a></li>
-        <li><a href="../index.html#skills">Skills</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-        <li><a href="../assets/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume &darr;</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="https://www.linkedin.com/in/s-viraj-patel/" class="nav-linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="assets/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume &darr;</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="page-hero">
-      <div class="container">
-        <span class="section-label mono" style="color: var(--gold);">Academic &amp; Personal</span>
-        <h1 style="font-family: var(--font-serif); font-size: clamp(36px,5vw,56px); color: var(--white); font-weight:400; line-height:1.1; margin-top: 10px;">Projects</h1>
-        <p style="margin-top: 14px; color: var(--slate-light); max-width: 520px; line-height:1.75; font-size:15px;">
-          Academic projects, coursework output, and self-directed analysis. Updated as the MSc programme progresses.
+
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-inner container">
+        <div class="hero-label mono">MSc Investment &amp; Financial Risk Management</div>
+        <h1 class="hero-name">Viraj Patel<br><em>Sankhla</em></h1>
+        <p class="hero-thesis">
+          Finance postgraduate with a grounding in equity markets, investment analysis, and risk management. Currently at the University of Westminster, developing research skills in portfolio construction and financial modelling.
         </p>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label mono">Location</span>
+            <span class="meta-value">London, UK</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label mono">Programme</span>
+            <span class="meta-value">MSc IFRM &middot; 2026</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label mono">Certified</span>
+            <span class="meta-value">Bloomberg Market Concepts</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#research" class="btn btn-primary">View Research</a>
+          <a href="assets/resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Resume</a>
+          <a href="https://www.linkedin.com/in/s-viraj-patel/" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
-    </div>
+      <div class="hero-ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>EQUITY RESEARCH</span><span class="dot">&#9632;</span>
+          <span>RISK MANAGEMENT</span><span class="dot">&#9632;</span>
+          <span>INVESTMENT ANALYSIS</span><span class="dot">&#9632;</span>
+          <span>FINANCIAL MODELLING</span><span class="dot">&#9632;</span>
+          <span>PORTFOLIO CONSTRUCTION</span><span class="dot">&#9632;</span>
+          <span>BLOOMBERG TERMINAL</span><span class="dot">&#9632;</span>
+          <span>FUNDAMENTAL ANALYSIS</span><span class="dot">&#9632;</span>
+          <span>EQUITY RESEARCH</span><span class="dot">&#9632;</span>
+          <span>RISK MANAGEMENT</span><span class="dot">&#9632;</span>
+          <span>INVESTMENT ANALYSIS</span><span class="dot">&#9632;</span>
+          <span>FINANCIAL MODELLING</span><span class="dot">&#9632;</span>
+          <span>PORTFOLIO CONSTRUCTION</span><span class="dot">&#9632;</span>
+          <span>BLOOMBERG TERMINAL</span><span class="dot">&#9632;</span>
+          <span>FUNDAMENTAL ANALYSIS</span><span class="dot">&#9632;</span>
+        </div>
+      </div>
+    </section>
 
-    <div class="section">
+    <!-- EDUCATION STRIP -->
+    <section class="education-strip">
       <div class="container">
-        <div class="research-grid">
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-year mono">2024 &ndash; 2026</div>
+            <div class="edu-degree">MSc Investment &amp; Financial Risk Management</div>
+            <div class="edu-school">University of Westminster &middot; London</div>
+          </div>
+          <div class="edu-divider"></div>
+          <div class="edu-card">
+            <div class="edu-year mono">2021 &ndash; 2024</div>
+            <div class="edu-degree">BBA with Minor in Finance &middot; 7.94/10</div>
+            <div class="edu-school">ICFAI Business School &middot; Hyderabad</div>
+          </div>
+          <div class="edu-divider"></div>
+          <div class="edu-card cert-card">
+            <div class="edu-year mono">Certifications</div>
+            <div class="cert-list">
+              <span class="cert-badge">Bloomberg Market Concepts</span>
+              <span class="cert-badge">Bloomberg Finance Fundamentals</span>
+              <span class="cert-badge">Prompt Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="research-card research-card--placeholder">
-            <div class="rc-type mono">Academic Project</div>
-            <div class="rc-title">MSc Coursework</div>
-            <p class="rc-desc">Key projects and assignments from the MSc in Investment and Financial Risk Management will be documented and shared here.</p>
-            <div class="rc-footer">
-              <span class="rc-status">In Progress</span>
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono">Career</span>
+          <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-meta">
+              <span class="tl-date mono">Nov 2025 &ndash; Present</span>
+              <span class="tl-duration mono">7 months</span>
+              <span class="tl-location">London, UK</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-card-top">
+                <div>
+                  <div class="tl-role">Associate</div>
+                  <div class="tl-company">TK Maxx</div>
+                </div>
+                <span class="tl-tag">Current</span>
+              </div>
+              <p class="tl-desc">Part-time role running alongside postgraduate studies. Day-to-day work involves customer operations and team coordination in a high-volume retail environment, building practical communication and prioritisation skills.</p>
             </div>
           </div>
 
-          <div class="research-card research-card--placeholder">
-            <div class="rc-type mono">Investment Analysis</div>
-            <div class="rc-title">Stock Pitch &amp; Valuation</div>
-            <p class="rc-desc">Structured equity analysis including industry context, financial statement review, and investment thesis development.</p>
-            <div class="rc-footer">
-              <span class="rc-status">Coming Soon</span>
+          <div class="tl-item">
+            <div class="tl-meta">
+              <span class="tl-date mono">Aug 2024 &ndash; Aug 2025</span>
+              <span class="tl-duration mono">1 year</span>
+              <span class="tl-location">London, UK</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-card-top">
+                <div>
+                  <div class="tl-role">Business Manager</div>
+                  <div class="tl-company">Godavari Hi-Teak Doors</div>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Managed financial records, daily sales tracking, and inventory, giving direct exposure to P&amp;L oversight and operational budgeting</li>
+                <li>Handled client relationships and led pricing negotiations, contributing to improved revenue performance against quarterly targets</li>
+              </ul>
             </div>
           </div>
 
-          <div class="research-card research-card--add">
-            <div class="rc-add-inner">
-              <div class="rc-add-icon">+</div>
-              <div class="rc-add-text">Projects added as they are completed</div>
+          <div class="tl-item">
+            <div class="tl-meta">
+              <span class="tl-date mono">Jun 2023 &ndash; Jul 2023</span>
+              <span class="tl-duration mono">2 months</span>
+              <span class="tl-location">Remote</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-card-top">
+                <div>
+                  <div class="tl-role">Marketing &amp; Management Intern</div>
+                  <div class="tl-company">Fxmtrack Financials</div>
+                </div>
+                <span class="tl-tag tl-tag--finance">Fintech</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>Supported client acquisition through data-driven campaigns, working within a trading-adjacent fintech environment</li>
+                <li>Gained early exposure to financial products and client servicing workflows, which informed my interest in investment analysis</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-meta">
+              <span class="tl-date mono">Jun 2022 &ndash; Jul 2023</span>
+              <span class="tl-duration mono">1 year 1 month</span>
+              <span class="tl-location">India</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-card-top">
+                <div>
+                  <div class="tl-role">Founder</div>
+                  <div class="tl-company">Foreverteen.in</div>
+                </div>
+                <span class="tl-tag tl-tag--venture">Entrepreneurship</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>Built and ran an online retail business from scratch, managing budgets, cash flow, and digital marketing independently</li>
+                <li>Developed practical decision-making and financial planning skills that directly translate to analytical work in finance</li>
+              </ul>
             </div>
           </div>
 
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- RESEARCH & PROJECTS -->
+    <section class="section section--alt" id="research">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono">Academic Work</span>
+          <h2 class="section-title">Research &amp; Projects</h2>
+          <p class="section-sub">This section will be updated with equity research reports and academic projects completed during the MSc programme. Work is added as it is finished, not as placeholders.</p>
+        </div>
+
+        <div class="research-empty">
+          <div class="empty-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="6" width="24" height="30" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <rect x="8" y="2" width="24" height="30" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+              <line x1="9" y1="14" x2="21" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="19" x2="21" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="24" x2="16" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="empty-title">Reports being added through 2025&ndash;2026</h3>
+          <p class="empty-text">Semester 1 and Semester 2 projects will be uploaded here as they are completed. Equity research reports and other analytical work will follow once finalised.</p>
+          <div class="empty-tags">
+            <span class="empty-tag">Equity Research</span>
+            <span class="empty-tag">Financial Models</span>
+            <span class="empty-tag">Semester Projects</span>
+            <span class="empty-tag">Market Analysis</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono">Capabilities</span>
+          <h2 class="section-title">Skills &amp; Tools</h2>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <div class="skill-group-title mono">Technical &amp; Analytical</div>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--primary">Bloomberg Terminal</span>
+              <span class="skill-tag skill-tag--primary">MS Excel</span>
+              <span class="skill-tag skill-tag--primary">Financial Modelling</span>
+              <span class="skill-tag skill-tag--primary">Investment Research</span>
+              <span class="skill-tag skill-tag--primary">Fundamental Analysis</span>
+              <span class="skill-tag skill-tag--primary">Budgeting &amp; Forecasting</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title mono">Software &amp; Platforms</div>
+            <div class="skill-tags">
+              <span class="skill-tag">PowerPoint</span>
+              <span class="skill-tag">Digital Marketing Tools</span>
+              <span class="skill-tag">MS Office Suite</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title mono">Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">English</span>
+              <span class="skill-tag">Hindi</span>
+              <span class="skill-tag">Gujarati</span>
+              <span class="skill-tag">Telugu</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title mono">Core Competencies</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Leadership</span>
+              <span class="skill-tag">Client Management</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Time Management</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="mono footer-copy">&copy; 2026 Viraj Sankhla</span>
-        <span class="footer-note">MSc Investment &amp; Financial Risk Management &middot; University of Westminster</span>
+        <span class="mono footer-copy">&copy; 2026 Viraj Patel Sankhla</span>
+        <a href="https://www.linkedin.com/in/s-viraj-patel/" class="footer-linkedin" target="_blank" rel="noopener">LinkedIn &rarr;</a>
       </div>
     </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
