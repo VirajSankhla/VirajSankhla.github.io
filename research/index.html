@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research | Viraj Sankhla</title>
+  <title>Research | Viraj Patel Sankhla</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -11,74 +11,50 @@
   <style>
     .page-hero {
       background: var(--navy);
-      padding: 120px 0 64px;
-      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 110px 0 56px;
+      border-bottom: 1px solid rgba(201,168,76,0.12);
     }
-    .page-hero .section-label { color: var(--gold); }
-    .page-hero .section-title { color: var(--white); }
-    .page-hero .section-sub   { color: var(--slate-light); }
-
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(34px,5vw,52px);
+      color: var(--white);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-top: 10px;
+    }
+    .page-sub {
+      margin-top: 14px;
+      color: var(--slate-lt);
+      font-size: 14.5px;
+      line-height: 1.75;
+      max-width: 500px;
+    }
     .filter-bar {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-top: 32px;
+      margin-top: 28px;
     }
-
     .filter-btn {
-      font-family: var(--font-mono);
+      font-family: var(--mono);
       font-size: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       padding: 6px 14px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--r-sm);
       background: transparent;
-      color: var(--slate-light);
+      color: var(--slate-lt);
       cursor: pointer;
-      transition: all var(--transition);
+      transition: all var(--ease);
     }
-
     .filter-btn:hover,
     .filter-btn.active {
       border-color: var(--gold);
       color: var(--gold);
       background: rgba(201,168,76,0.08);
     }
-
-    .research-page-grid {
-      padding: 64px 0;
-    }
-
-    .empty-state {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 80px 40px;
-      border: 1px dashed var(--border);
-      border-radius: var(--radius-lg);
-      background: var(--off-white);
-    }
-
-    .empty-icon {
-      font-size: 36px;
-      margin-bottom: 16px;
-      opacity: 0.3;
-    }
-
-    .empty-title {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .empty-text {
-      color: var(--text-muted);
-      font-size: 14px;
-      max-width: 400px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
+    .page-content { padding: 72px 0; }
   </style>
 </head>
 <body>
@@ -86,8 +62,8 @@
   <header class="site-header">
     <nav class="navbar">
       <div class="nav-logo">
-        <span class="nav-monogram">VS</span>
-        <span class="nav-name">Viraj Sankhla</span>
+        <span class="nav-monogram">VPS</span>
+        <span class="nav-name">Viraj Patel Sankhla</span>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -97,7 +73,7 @@
         <li><a href="../index.html#experience">Experience</a></li>
         <li><a href="index.html" class="active">Research</a></li>
         <li><a href="../index.html#skills">Skills</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/s-viraj-patel/" class="nav-linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="../assets/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume &darr;</a></li>
       </ul>
     </nav>
@@ -106,11 +82,9 @@
   <main>
     <div class="page-hero">
       <div class="container">
-        <span class="section-label mono">Academic &amp; Independent</span>
-        <h1 class="section-title" style="font-family: var(--font-serif); font-size: clamp(36px,5vw,56px); color: var(--white); font-weight:400; line-height:1.1; margin-top: 10px;">Research &amp; Projects</h1>
-        <p class="section-sub" style="margin-top: 14px;">
-          This page will be updated as dissertations, equity research reports, financial models, and market notes are completed during the MSc programme and beyond.
-        </p>
+        <span class="section-label mono">Academic &amp; Independent Work</span>
+        <h1 class="page-title">Research &amp; Projects</h1>
+        <p class="page-sub">Published as work is completed during the MSc programme. No placeholders.</p>
         <div class="filter-bar">
           <button class="filter-btn active">All</button>
           <button class="filter-btn">Equity Research</button>
@@ -122,62 +96,27 @@
       </div>
     </div>
 
-    <div class="research-page-grid">
+    <div class="page-content">
       <div class="container">
-        <div class="research-grid">
-
-          <div class="research-card research-card--placeholder">
-            <div class="rc-type mono">Dissertation</div>
-            <div class="rc-title">MSc Research Project</div>
-            <p class="rc-desc">Primary research project for the MSc programme. Topic in development. Expected to focus on quantitative methods in equity markets or financial risk.</p>
-            <div class="rc-footer">
-              <span class="rc-status">In Progress</span>
-            </div>
+        <div class="research-empty">
+          <div class="empty-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="7" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <rect x="10" y="3" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.35"/>
+              <line x1="11" y1="16" x2="24" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="11" y1="21" x2="24" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="11" y1="26" x2="18" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
           </div>
-
-          <div class="research-card research-card--placeholder">
-            <div class="rc-type mono">Equity Research</div>
-            <div class="rc-title">Company Coverage</div>
-            <p class="rc-desc">Fundamental equity research notes including DCF and comparable company analysis. Coverage universe to be announced.</p>
-            <div class="rc-footer">
-              <span class="rc-status">Coming Soon</span>
-            </div>
+          <h3 class="empty-title">Being added through 2025 &ndash; 2026</h3>
+          <p class="empty-text">Semester 1 and Semester 2 projects, equity research reports, and analytical work will appear here as each piece is finalised.</p>
+          <div class="empty-tags">
+            <span class="empty-tag">Equity Research</span>
+            <span class="empty-tag">Financial Models</span>
+            <span class="empty-tag">Semester Projects</span>
+            <span class="empty-tag">Market Analysis</span>
+            <span class="empty-tag">Risk Frameworks</span>
           </div>
-
-          <div class="research-card research-card--placeholder">
-            <div class="rc-type mono">Financial Modelling</div>
-            <div class="rc-title">Valuation Models</div>
-            <p class="rc-desc">DCF, LBO, and comparable analysis models built as part of coursework and independent study.</p>
-            <div class="rc-footer">
-              <span class="rc-status">Coming Soon</span>
-            </div>
-          </div>
-
-          <div class="research-card research-card--placeholder">
-            <div class="rc-type mono">Risk Analysis</div>
-            <div class="rc-title">Portfolio Risk Frameworks</div>
-            <p class="rc-desc">Case studies applying VaR, stress testing, and scenario analysis to portfolio construction problems.</p>
-            <div class="rc-footer">
-              <span class="rc-status">Coming Soon</span>
-            </div>
-          </div>
-
-          <div class="research-card research-card--placeholder">
-            <div class="rc-type mono">Market Notes</div>
-            <div class="rc-title">Sector &amp; Macro Commentary</div>
-            <p class="rc-desc">Short-form commentary on macroeconomic trends and sector dynamics, drawing on Bloomberg Terminal data and academic reading.</p>
-            <div class="rc-footer">
-              <span class="rc-status">Coming Soon</span>
-            </div>
-          </div>
-
-          <div class="research-card research-card--add">
-            <div class="rc-add-inner">
-              <div class="rc-add-icon">+</div>
-              <div class="rc-add-text">More research being added throughout 2025&ndash;2026</div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -186,15 +125,15 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="mono footer-copy">&copy; 2026 Viraj Sankhla</span>
+        <span class="footer-copy mono">&copy; 2026 Viraj Patel Sankhla</span>
         <span class="footer-note">MSc Investment &amp; Financial Risk Management &middot; University of Westminster</span>
+        <a href="https://www.linkedin.com/in/s-viraj-patel/" class="footer-linkedin" target="_blank" rel="noopener">LinkedIn &rarr;</a>
       </div>
     </div>
   </footer>
 
   <script src="../script.js"></script>
   <script>
-    // Filter buttons (client-side, for future use)
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));

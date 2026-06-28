@@ -1,26 +1,34 @@
 /* =========================================================
-   VIRAJ PATEL SANKHLA | script.js
+   VIRAJ PATEL SANKHLA — script.js
    ========================================================= */
 
-// --- Mobile nav toggle ---
+// Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks  = document.getElementById('navLinks');
 
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
+    navToggle.setAttribute('aria-expanded', String(open));
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', false);
+      navToggle.setAttribute('aria-expanded', 'false');
     });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
-// --- Active nav link on scroll ---
+// Active nav link on scroll
 const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
@@ -33,40 +41,43 @@ function updateActiveNav() {
   });
   navAnchors.forEach(a => {
     a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) {
-      a.classList.add('active');
-    }
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
   });
 }
 
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
 
-// --- Fade-in on scroll ---
-const fadeEls = document.querySelectorAll(
-  '.tl-item, .skill-group, .edu-card, .research-empty'
+// Scroll fade-in
+const fadeTargets = document.querySelectorAll(
+  '.tl-item, .skill-col, .research-empty, .edu-entry, .cert-row, .stat-item'
 );
 
-fadeEls.forEach(el => el.classList.add('fade-in'));
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const delay = parseInt(entry.target.dataset.delay || 0);
-        setTimeout(() => entry.target.classList.add('visible'), 60 * delay);
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-);
-
-fadeEls.forEach((el, i) => {
-  el.dataset.delay = i % 4;
-  observer.observe(el);
+fadeTargets.forEach(el => {
+  if (!el.classList.contains('fade-in')) el.classList.add('fade-in');
 });
 
-document.querySelectorAll('.skills-grid .skill-group').forEach((g, i) => {
-  g.dataset.delay = i;
-});
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay || 0);
+      setTimeout(() => entry.target.classList.add('visible'), delay * 70);
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+
+// stagger siblings in the same parent
+function staggerGroup(selector) {
+  document.querySelectorAll(selector).forEach((el, i) => {
+    el.dataset.delay = i % 5;
+    io.observe(el);
+  });
+}
+
+staggerGroup('.tl-item');
+staggerGroup('.skill-col');
+staggerGroup('.edu-entry');
+staggerGroup('.cert-row');
+staggerGroup('.stat-item');
+document.querySelectorAll('.research-empty').forEach(el => io.observe(el));
