@@ -1,3 +1,6 @@
+/* =========================================================
+   VIRAJ PATEL SANKHLA | script.js
+   ========================================================= */
 
 // --- Mobile nav toggle ---
 const navToggle = document.getElementById('navToggle');
