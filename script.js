@@ -1,5 +1,7 @@
 /* =========================================================
    VIRAJ PATEL SANKHLA — script.js
+   Do not edit unless you know what you are doing.
+   All content changes go in index.html only.
    ========================================================= */
 
 // Mobile nav toggle
@@ -19,7 +21,6 @@ if (navToggle && navLinks) {
     });
   });
 
-  // Close on outside click
   document.addEventListener('click', e => {
     if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
       navLinks.classList.remove('open');
@@ -28,35 +29,24 @@ if (navToggle && navLinks) {
   });
 }
 
-// Active nav link on scroll
+// Active nav highlight on scroll
 const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
 function updateActiveNav() {
   let current = '';
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 90) {
-      current = section.getAttribute('id');
-    }
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 90) current = s.id;
   });
   navAnchors.forEach(a => {
     a.classList.remove('active');
     if (a.getAttribute('href') === '#' + current) a.classList.add('active');
   });
 }
-
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
 
-// Scroll fade-in
-const fadeTargets = document.querySelectorAll(
-  '.tl-item, .skill-col, .research-empty, .edu-entry, .cert-row, .stat-item'
-);
-
-fadeTargets.forEach(el => {
-  if (!el.classList.contains('fade-in')) el.classList.add('fade-in');
-});
-
+// Scroll fade-in for all animated elements
 const io = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -67,17 +57,21 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
 
-// stagger siblings in the same parent
-function staggerGroup(selector) {
+function observeGroup(selector) {
   document.querySelectorAll(selector).forEach((el, i) => {
+    el.classList.add('fade-in');
     el.dataset.delay = i % 5;
     io.observe(el);
   });
 }
 
-staggerGroup('.tl-item');
-staggerGroup('.skill-col');
-staggerGroup('.edu-entry');
-staggerGroup('.cert-row');
-staggerGroup('.stat-item');
-document.querySelectorAll('.research-empty').forEach(el => io.observe(el));
+observeGroup('.tl-item');
+observeGroup('.rc-card');
+observeGroup('.skill-col');
+observeGroup('.edu-entry');
+observeGroup('.cert-row');
+observeGroup('.stat-item');
+document.querySelectorAll('.research-empty').forEach(el => {
+  el.classList.add('fade-in');
+  io.observe(el);
+});

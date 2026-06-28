@@ -12,7 +12,19 @@
 </head>
 <body>
 
-  <!-- NAV -->
+  <!--
+  ============================================================
+  NAV — How to edit
+  ============================================================
+  - To change your name in the nav bar: edit the text inside
+    <span class="nav-name"> and <span class="nav-monogram">
+  - To add a new nav link: copy one <li><a href="#section">Label</a></li>
+    and change the href to match the id of the section you want
+  - To update the LinkedIn URL: find class="nav-linkedin" and
+    change the href value
+  - To update the Resume link: find class="nav-cta" and change href
+  ============================================================
+  -->
   <header class="site-header" id="top">
     <nav class="navbar">
       <div class="nav-logo">
@@ -35,9 +47,65 @@
 
   <main>
 
-    <!-- HERO -->
+    <!--
+    ============================================================
+    HERO SECTION — How to edit
+    ============================================================
+    PHOTO:
+    - Replace assets/profile.jpg with your actual photo file
+    - Keep the filename as profile.jpg OR update the src below
+    - Recommended: square crop, min 400x400px, professional headshot
+    - To remove the photo entirely: delete the <div class="hero-photo"> block
+
+    NAME & LABEL:
+    - Edit the text inside <h1 class="hero-name"> for your name
+    - Edit <div class="hero-label mono"> for the programme label
+
+    THESIS PARAGRAPH:
+    - Edit the text inside <p class="hero-thesis"> — keep it 2–3 sentences
+
+    STATS (the three numbers):
+    - Each stat is a <div class="stat-item"> with a <span class="stat-value">
+      and <span class="stat-label mono">
+    - Change the numbers and labels as needed
+    - To add a 4th stat: copy a stat-item block and paste inside .hero-stats
+
+    META ROW (small text below stats):
+    - Each piece of info is a <span class="hmr-item mono">
+    - Edit the text inside each span
+    - The <span class="hmr-sep"> are just the | dividers between items
+
+    BUTTONS:
+    - Two buttons inside <div class="hero-actions">
+    - Change href values to update the Resume link and LinkedIn link
+    ============================================================
+    -->
     <section class="hero" id="about">
       <div class="hero-left">
+        <div class="hero-photo-wrap">
+          <!--
+          PHOTO PLACEHOLDER:
+          Once you have your photo ready, put the file in assets/
+          and name it profile.jpg (or update the src attribute below).
+          The placeholder div will be replaced by the img tag automatically
+          when the image loads. No style changes needed.
+          -->
+          <div class="hero-photo-placeholder" id="photoPlaceholder">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M6 42c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span>Add profile.jpg<br>to assets/ folder</span>
+          </div>
+          <img
+            src="assets/profile.jpg"
+            alt="Viraj Patel Sankhla"
+            class="hero-photo"
+            id="heroPhoto"
+            onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';"
+            onload="document.getElementById('photoPlaceholder').style.display='none'; this.style.display='block';"
+          />
+        </div>
         <div class="hero-label mono">MSc Investment &amp; Financial Risk Management</div>
         <h1 class="hero-name">Viraj<br>Patel<br><em>Sankhla</em></h1>
         <div class="hero-actions">
@@ -45,11 +113,16 @@
           <a href="https://www.linkedin.com/in/s-viraj-patel/" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn &rarr;</a>
         </div>
       </div>
+
       <div class="hero-right">
         <p class="hero-thesis">
           Finance postgraduate with a grounding in equity markets, investment analysis, and risk management. Currently completing an MSc at the University of Westminster, with hands-on experience in business operations, client-facing roles, and strategy consulting.
         </p>
         <div class="hero-stats">
+          <!--
+          STATS — to update a number or label, edit the text inside
+          stat-value and stat-label. Do not change the class names.
+          -->
           <div class="stat-item">
             <span class="stat-value">2026</span>
             <span class="stat-label mono">Expected Graduation</span>
@@ -59,8 +132,8 @@
             <span class="stat-label mono">Undergraduate GPA / 10</span>
           </div>
           <div class="stat-item">
-            <span class="stat-value">3+</span>
-            <span class="stat-label mono">Bloomberg Certifications</span>
+            <span class="stat-value">3</span>
+            <span class="stat-label mono">Certifications</span>
           </div>
         </div>
         <div class="hero-meta-row">
@@ -73,7 +146,7 @@
       </div>
     </section>
 
-    <!-- TICKER -->
+    <!-- TICKER — edit the <span> text items to change competency labels -->
     <div class="hero-ticker" aria-hidden="true">
       <div class="ticker-track">
         <span>EQUITY RESEARCH</span><span class="tdot">&#9632;</span>
@@ -95,7 +168,31 @@
       </div>
     </div>
 
-    <!-- EDUCATION + CERTS -->
+    <!--
+    ============================================================
+    EDUCATION & CERTIFICATIONS — How to edit
+    ============================================================
+    ADDING A NEW DEGREE:
+    Copy this block and paste inside <div class="edu-entries">:
+
+      <div class="edu-entry">
+        <div class="edu-entry-year mono">YYYY – YYYY</div>
+        <div class="edu-entry-degree">Degree Name</div>
+        <div class="edu-entry-school">Institution · City · Grade (optional)</div>
+      </div>
+
+    ADDING A NEW CERTIFICATION:
+    Copy this block and paste inside <div class="cert-rows">:
+
+      <div class="cert-row">
+        <span class="cert-name">Certification Name</span>
+        <span class="cert-year mono">YYYY</span>
+      </div>
+
+    No style changes needed for either. The last cert-row automatically
+    loses its bottom border via CSS :last-child.
+    ============================================================
+    -->
     <section class="edu-section">
       <div class="container">
         <div class="edu-grid">
@@ -130,7 +227,7 @@
                 <span class="cert-year mono">2025</span>
               </div>
               <div class="cert-row">
-                <span class="cert-name">Prompt Engineering for Everyone</span>
+                <span class="cert-name">Prompt Engineering for Everyone &middot; Cognitive Class</span>
                 <span class="cert-year mono">2025</span>
               </div>
             </div>
@@ -140,7 +237,53 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!--
+    ============================================================
+    EXPERIENCE / TIMELINE — How to edit
+    ============================================================
+    ADDING A NEW ROLE:
+    Copy the entire block below and paste ABOVE the last .tl-item
+    (most recent roles go at the top). Fill in the details:
+
+      <div class="tl-item fade-in">
+        <div class="tl-left">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>        ← remove this on the LAST item
+        </div>
+        <div class="tl-right">
+          <div class="tl-meta-row">
+            <span class="tl-date mono">Mon YYYY – Mon YYYY · X mo/yr</span>
+            <span class="tl-loc mono">City, Country</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <div class="tl-titles">
+                <div class="tl-role">Job Title</div>
+                <div class="tl-company">Company Name</div>
+              </div>
+              <span class="tl-badge tl-badge--TYPE">Label</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Bullet point one</li>
+              <li>Bullet point two</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    BADGE TYPES (change tl-badge--TYPE to one of):
+      tl-badge--current     gold tint   — use for present roles
+      tl-badge--consulting  blue tint   — consulting / advisory
+      tl-badge--finance     teal tint   — fintech / banking
+      tl-badge--venture     green tint  — entrepreneurship / startups
+
+    To use NO badge: remove the <span class="tl-badge..."> line entirely.
+
+    IMPORTANT: The LAST .tl-item in the list should NOT have
+    <div class="tl-line"></div> inside tl-left, so the vertical
+    line doesn't extend past the final entry.
+    ============================================================
+    -->
     <section class="section" id="experience">
       <div class="container">
         <div class="section-header">
@@ -150,7 +293,7 @@
 
         <div class="timeline">
 
-          <!-- Strategy Consultant -->
+          <!-- EXPERIENCE ENTRY: Strategy Consultant -->
           <div class="tl-item fade-in">
             <div class="tl-left">
               <div class="tl-dot"></div>
@@ -158,26 +301,26 @@
             </div>
             <div class="tl-right">
               <div class="tl-meta-row">
-                <span class="tl-date mono">Jun 2026</span>
+                <span class="tl-date mono">Jun 2026 &middot; 2 weeks</span>
                 <span class="tl-loc mono">London, UK</span>
               </div>
               <div class="tl-card">
                 <div class="tl-card-header">
                   <div class="tl-titles">
                     <div class="tl-role">Strategy Consultant</div>
-                    <div class="tl-company">Practera / Tiraverse Ltd</div>
+                    <div class="tl-company">Practera / Tiraverse Ltd &middot; University of Westminster Micro-Internship</div>
                   </div>
                   <span class="tl-badge tl-badge--consulting">Consulting</span>
                 </div>
                 <ul class="tl-bullets">
-                  <li>Participated in a simulated consulting engagement as part of a five-person advisory team, working with a real London-based B2B SaaS start-up on go-to-market strategy</li>
-                  <li>Conducted secondary market research across the UK B2B SaaS landscape and produced data-driven financial benchmarks to contextualise the client's competitive position</li>
+                  <li>Completed a 2-week experiential micro-internship programme facilitated by the University of Westminster, embedded as part of a five-person advisory team working with a real London-based B2B SaaS start-up</li>
+                  <li>Developed a go-to-market strategy, conducting secondary research across the UK B2B SaaS landscape and producing data-driven financial benchmarks to contextualise the client's competitive position</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- TK Maxx -->
+          <!-- EXPERIENCE ENTRY: TK Maxx -->
           <div class="tl-item fade-in">
             <div class="tl-left">
               <div class="tl-dot"></div>
@@ -201,7 +344,7 @@
             </div>
           </div>
 
-          <!-- Business Manager -->
+          <!-- EXPERIENCE ENTRY: Business Manager -->
           <div class="tl-item fade-in">
             <div class="tl-left">
               <div class="tl-dot"></div>
@@ -227,7 +370,7 @@
             </div>
           </div>
 
-          <!-- Fxmtrack -->
+          <!-- EXPERIENCE ENTRY: Fxmtrack -->
           <div class="tl-item fade-in">
             <div class="tl-left">
               <div class="tl-dot"></div>
@@ -254,10 +397,11 @@
             </div>
           </div>
 
-          <!-- Foreverteen -->
+          <!-- EXPERIENCE ENTRY: Foreverteen (LAST — no tl-line) -->
           <div class="tl-item fade-in">
             <div class="tl-left">
               <div class="tl-dot"></div>
+              <!-- No tl-line here: this is the last entry -->
             </div>
             <div class="tl-right">
               <div class="tl-meta-row">
@@ -284,40 +428,126 @@
       </div>
     </section>
 
-    <!-- RESEARCH -->
+    <!--
+    ============================================================
+    RESEARCH & PROJECTS — How to edit
+    ============================================================
+    WHEN YOU HAVE A NEW PROJECT TO ADD:
+    1. Copy one <div class="rc-card"> block below
+    2. Paste it BEFORE the research-empty div (published work goes first)
+    3. Fill in rc-type, rc-title, rc-desc, and rc-link
+    4. Change rc-tag text to match the category
+    5. If you have a PDF or link: set href on the <a class="rc-link"> tag
+       If no link yet: remove the <a> tag entirely
+
+    Project card template:
+
+      <div class="rc-card fade-in">
+        <div class="rc-card-top">
+          <span class="rc-type mono">CATEGORY</span>
+          <span class="rc-tag">Tag Label</span>
+        </div>
+        <h3 class="rc-title">Project Title</h3>
+        <p class="rc-desc">
+          Short description of what the project covers, methodology used,
+          and any key findings. 2–3 sentences is ideal.
+        </p>
+        <div class="rc-footer">
+          <span class="rc-meta mono">Month YYYY &middot; University of Westminster</span>
+          <a href="assets/your-file.pdf" class="rc-link" target="_blank" rel="noopener">View Report &rarr;</a>
+        </div>
+      </div>
+
+    RC-TYPE examples: "Equity Research", "Financial Model",
+      "Risk Analysis", "Semester Project", "Market Notes", "Dissertation"
+
+    WHEN ALL WORK IS PUBLISHED: delete the <div class="research-empty">
+    block entirely. The grid will fill naturally.
+
+    ADDING A NEW CATEGORY TAG:
+    The rc-tag uses no modifier class — just change the text inside.
+    Tag colour is set globally in style.css and does not need editing.
+    ============================================================
+    -->
     <section class="section section--alt" id="research">
       <div class="container">
         <div class="section-header">
           <span class="section-label mono">Academic Work</span>
           <h2 class="section-title">Research &amp; Projects</h2>
-          <p class="section-sub">Semester 1 and Semester 2 projects will be published here as they are completed. Equity research reports and other analytical work will follow once finalised.</p>
+          <p class="section-sub">Published work from the MSc programme. Added as each piece is finalised, not as placeholders.</p>
         </div>
 
-        <div class="research-empty">
-          <div class="empty-icon">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="5" y="7" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
-              <rect x="10" y="3" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.35"/>
-              <line x1="11" y1="16" x2="24" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="11" y1="21" x2="24" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="11" y1="26" x2="18" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="empty-title">Being added through 2025 &ndash; 2026</h3>
-          <p class="empty-text">Work is uploaded as it is finished. Placeholders are intentionally avoided here.</p>
-          <div class="empty-tags">
-            <span class="empty-tag">Equity Research</span>
-            <span class="empty-tag">Financial Models</span>
-            <span class="empty-tag">Semester Projects</span>
-            <span class="empty-tag">Market Analysis</span>
-            <span class="empty-tag">Risk Frameworks</span>
-          </div>
-        </div>
+        <div class="rc-grid">
 
+          <!-- PUBLISHED PROJECT EXAMPLE -->
+          <!-- Replace this with your actual Semester 1 / 2 projects -->
+          <div class="rc-card fade-in">
+            <div class="rc-card-top">
+              <span class="rc-type mono">Semester Project</span>
+              <span class="rc-tag">Financial Analysis</span>
+            </div>
+            <h3 class="rc-title">Financial Performance Analysis: FTSE 100 Sector Study</h3>
+            <p class="rc-desc">
+              Comparative analysis of financial performance across selected FTSE 100 sectors using ratio analysis, trend evaluation, and Bloomberg Terminal data. Assessed profitability, leverage, and liquidity metrics to identify sector-level investment implications.
+            </p>
+            <div class="rc-footer">
+              <span class="rc-meta mono">2025 &middot; University of Westminster</span>
+              <!-- When you have a PDF, replace # with the file path: href="assets/project-name.pdf" -->
+              <!-- If no link yet, delete the <a> tag below entirely -->
+              <!-- <a href="assets/ftse-sector-study.pdf" class="rc-link" target="_blank" rel="noopener">View Report &rarr;</a> -->
+            </div>
+          </div>
+
+          <!-- EMPTY STATE — delete this block once research section is full -->
+          <div class="research-empty fade-in">
+            <div class="empty-icon">
+              <svg width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="7" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <rect x="10" y="3" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.35"/>
+                <line x1="11" y1="16" x2="24" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="11" y1="21" x2="24" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="11" y1="26" x2="18" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="empty-title">More work being added</h3>
+            <p class="empty-text">Equity research reports, additional semester projects, and the dissertation will appear here as they are completed.</p>
+            <div class="empty-tags">
+              <span class="empty-tag">Equity Research</span>
+              <span class="empty-tag">Dissertation</span>
+              <span class="empty-tag">Financial Models</span>
+              <span class="empty-tag">Risk Frameworks</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!--
+    ============================================================
+    SKILLS — How to edit
+    ============================================================
+    ADDING A NEW SKILL TAG:
+    Inside any <div class="skill-tags">, copy one of these and paste:
+
+      <span class="stag">Skill Name</span>               ← plain/grey
+      <span class="stag stag--primary">Skill Name</span> ← navy filled (technical tools)
+      <span class="stag stag--accent">Skill Name</span>  ← gold tint (finance/analytical)
+
+    ADDING A NEW SKILL GROUP:
+    Copy this block and paste inside either .skill-col:
+
+      <div class="skill-group">
+        <div class="skill-group-label mono">Group Label</div>
+        <div class="skill-tags">
+          <span class="stag">Tag One</span>
+          <span class="stag">Tag Two</span>
+        </div>
+      </div>
+
+    Do not change any class names. Only edit text content.
+    ============================================================
+    -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section-header">
@@ -375,6 +605,10 @@
 
   </main>
 
+  <!--
+  FOOTER — edit footer-copy text for copyright year/name
+  LinkedIn href is the only link here — update if your URL changes
+  -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
