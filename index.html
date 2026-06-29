@@ -51,11 +51,12 @@
     ============================================================
     HERO SECTION — How to edit
     ============================================================
-    PHOTO:
-    - Replace assets/profile.jpg with your actual photo file
-    - Keep the filename as profile.jpg OR update the src below
-    - Recommended: square crop, min 400x400px, professional headshot
-    - To remove the photo entirely: delete the <div class="hero-photo"> block
+    PHOTO (located in the RIGHT column, above the intro text):
+    - Drop your photo into the assets/ folder and name it profile.jpg
+    - The neomorphic frame and placeholder auto-hide once the image loads
+    - Recommended: square crop, minimum 400x400px, professional headshot
+    - To remove: delete the entire <div class="hero-photo-wrap"> block in hero-right
+    - To update your name/role shown beside the photo: edit hero-photo-name and hero-photo-role
 
     NAME & LABEL:
     - Edit the text inside <h1 class="hero-name"> for your name
@@ -82,30 +83,6 @@
     -->
     <section class="hero" id="about">
       <div class="hero-left">
-        <div class="hero-photo-wrap">
-          <!--
-          PHOTO PLACEHOLDER:
-          Once you have your photo ready, put the file in assets/
-          and name it profile.jpg (or update the src attribute below).
-          The placeholder div will be replaced by the img tag automatically
-          when the image loads. No style changes needed.
-          -->
-          <div class="hero-photo-placeholder" id="photoPlaceholder">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="18" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
-              <path d="M6 42c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            </svg>
-            <span>Add profile.jpg<br>to assets/ folder</span>
-          </div>
-          <img
-            src="assets/profile.jpg"
-            alt="Viraj Patel Sankhla"
-            class="hero-photo"
-            id="heroPhoto"
-            onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';"
-            onload="document.getElementById('photoPlaceholder').style.display='none'; this.style.display='block';"
-          />
-        </div>
         <div class="hero-label mono">MSc Investment &amp; Financial Risk Management</div>
         <h1 class="hero-name">Viraj<br>Patel<br><em>Sankhla</em></h1>
         <div class="hero-actions">
@@ -115,6 +92,34 @@
       </div>
 
       <div class="hero-right">
+        <!--
+        PHOTO: Drop profile.jpg into the assets/ folder.
+        The placeholder auto-hides when the image loads.
+        Change hero-photo-name and hero-photo-role text if needed.
+        -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <div class="hero-photo-placeholder" id="photoPlaceholder">
+              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M6 42c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+              <span>profile.jpg</span>
+            </div>
+            <img
+              src="assets/profile.jpg"
+              alt="Viraj Patel Sankhla"
+              class="hero-photo"
+              id="heroPhoto"
+              onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';"
+              onload="document.getElementById('photoPlaceholder').style.display='none'; this.style.display='block';"
+            />
+          </div>
+          <div class="hero-photo-intro">
+            <div class="hero-photo-name">Viraj Patel Sankhla</div>
+            <div class="hero-photo-role mono">MSc Investment &amp; Financial Risk</div>
+          </div>
+        </div>
         <p class="hero-thesis">
           Finance postgraduate with a grounding in equity markets, investment analysis, and risk management. Currently completing an MSc at the University of Westminster, with hands-on experience in business operations, client-facing roles, and strategy consulting.
         </p>
