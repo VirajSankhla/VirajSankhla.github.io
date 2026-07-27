@@ -1,102 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Viraj Patel Sankhla</title>
+  <meta name="description" content="Projects archive for Viraj Patel Sankhla's finance portfolio." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
-  <style>
-    .page-hero {
-      background: var(--navy);
-      padding: 110px 0 56px;
-      border-bottom: 1px solid rgba(201,168,76,0.12);
-    }
-    .page-title {
-      font-family: var(--serif);
-      font-size: clamp(34px,5vw,52px);
-      color: var(--white);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-top: 10px;
-    }
-    .page-sub {
-      margin-top: 14px;
-      color: var(--slate-lt);
-      font-size: 14.5px;
-      line-height: 1.75;
-      max-width: 500px;
-    }
-    .page-content { padding: 72px 0; }
-  </style>
 </head>
 <body>
-
   <header class="site-header">
-    <nav class="navbar">
-      <div class="nav-logo">
-        <span class="nav-monogram">VPS</span>
-        <span class="nav-name">Viraj Patel Sankhla</span>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html#about">About</a></li>
+    <nav class="navbar container" aria-label="Primary">
+      <a class="brand" href="../index.html#home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span class="brand-copy">
+          <span class="brand-name">Viraj Patel Sankhla</span>
+          <span class="brand-role mono">Finance Portfolio</span>
+        </span>
+        <li><a href="../index.html#education">Education</a></li>
         <li><a href="../index.html#experience">Experience</a></li>
-        <li><a href="../research/index.html">Research</a></li>
         <li><a href="../index.html#skills">Skills</a></li>
-        <li><a href="https://www.linkedin.com/in/s-viraj-patel/" class="nav-linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="../assets/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume &darr;</a></li>
+        <li><a href="index.html" class="active">Projects</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#portfolio">Portfolio</a></li>
+        <li><a href="https://www.linkedin.com/in/s-viraj-patel/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="page-hero">
+    <section class="section section--ink" id="home">
       <div class="container">
-        <span class="section-label mono">Academic &amp; Personal</span>
-        <h1 class="page-title">Projects</h1>
-        <p class="page-sub">MSc coursework, applied projects and independent analytical work. Updated as each piece is completed.</p>
-      </div>
-    </div>
-
-    <div class="page-content">
-      <div class="container">
-        <div class="research-empty">
-          <div class="empty-icon">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="5" y="7" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
-              <rect x="10" y="3" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.35"/>
-              <line x1="11" y1="16" x2="24" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="11" y1="21" x2="24" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="11" y1="26" x2="18" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
+        <header class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="section-kicker mono">Projects archive</p>
+            <h1 class="section-title">Projects</h1>
           </div>
-          <h3 class="empty-title">Projects being added as completed</h3>
-          <p class="empty-text">Semester 1 and Semester 2 projects from the MSc programme will be documented and uploaded here once finalised.</p>
-          <div class="empty-tags">
-            <span class="empty-tag">MSc Coursework</span>
-            <span class="empty-tag">Investment Analysis</span>
-            <span class="empty-tag">Valuation</span>
-            <span class="empty-tag">Portfolio Management</span>
-          </div>
-        </div>
+          <a class="section-link section-link--light" href="../index.html#projects">Back to main portfolio</a>
+        </header>
       </div>
-    </div>
+    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-copy mono">&copy; 2026 Viraj Patel Sankhla</span>
-        <span class="footer-note">MSc Investment &amp; Financial Risk Management &middot; University of Westminster</span>
-        <a href="https://www.linkedin.com/in/s-viraj-patel/" class="footer-linkedin" target="_blank" rel="noopener">LinkedIn &rarr;</a>
-      </div>
-    </div>
-  </footer>
 
   <script src="../script.js"></script>
 </body>

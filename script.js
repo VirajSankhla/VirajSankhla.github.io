@@ -1,77 +1,71 @@
-/* =========================================================
-   VIRAJ PATEL SANKHLA — script.js
-   Do not edit unless you know what you are doing.
-   All content changes go in index.html only.
-   ========================================================= */
-
-// Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
-const navLinks  = document.getElementById('navLinks');
+const navLinks = document.getElementById('navLinks');
+const sectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const sections = document.querySelectorAll('section[id]');
+
+function setMenuState(isOpen) {
+  if (!navToggle || !navLinks) {
+    return;
+  }
+
+  navLinks.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+}
 
 if (navToggle && navLinks) {
+  navToggle.setAttribute('aria-expanded', 'false');
+
   navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(open));
+    setMenuState(!navLinks.classList.contains('open'));
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', () => setMenuState(false));
   });
 
-  document.addEventListener('click', e => {
-    if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
+  document.addEventListener('click', event => {
+    if (!navToggle.contains(event.target) && !navLinks.contains(event.target)) {
+      setMenuState(false);
     }
   });
 }
 
-// Active nav highlight on scroll
-const sections   = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-
 function updateActiveNav() {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 90) current = s.id;
+  let currentSection = '';
+
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 120) {
+      currentSection = section.id;
+    }
   });
-  navAnchors.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+
+  sectionLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
   });
 }
+
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
 
-// Scroll fade-in for all animated elements
-const io = new IntersectionObserver(entries => {
+const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const delay = parseInt(entry.target.dataset.delay || 0);
-      setTimeout(() => entry.target.classList.add('visible'), delay * 70);
-      io.unobserve(entry.target);
+    if (!entry.isIntersecting) {
+      return;
     }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
 
-function observeGroup(selector) {
-  document.querySelectorAll(selector).forEach((el, i) => {
-    el.classList.add('fade-in');
-    el.dataset.delay = i % 5;
-    io.observe(el);
+    const delay = Number(entry.target.dataset.delay || 0);
+    window.setTimeout(() => {
+      entry.target.classList.add('visible');
+    }, delay * 60);
+    revealObserver.unobserve(entry.target);
   });
-}
+}, {
+  threshold: 0.12,
+  rootMargin: '0px 0px -8% 0px',
+});
 
-observeGroup('.tl-item');
-observeGroup('.rc-card');
-observeGroup('.skill-col');
-observeGroup('.edu-entry');
-observeGroup('.cert-row');
-observeGroup('.stat-item');
-document.querySelectorAll('.research-empty').forEach(el => {
-  el.classList.add('fade-in');
-  io.observe(el);
+document.querySelectorAll('[data-reveal]').forEach((element, index) => {
+  element.classList.add('reveal');
+  element.dataset.delay = String(index % 6);
+  revealObserver.observe(element);
 });

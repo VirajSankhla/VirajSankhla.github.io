@@ -1,628 +1,373 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viraj Patel Sankhla | Investment &amp; Financial Risk</title>
-  <meta name="description" content="Viraj Patel Sankhla — MSc Investment and Financial Risk Management, University of Westminster. Aspiring equity research and investment analyst." />
+  <title>Viraj Patel Sankhla | Finance Portfolio</title>
+  <meta name="description" content="Viraj Patel Sankhla's finance portfolio for graduate roles in investment management, equity research, asset management, risk analytics, financial markets, and investment banking." />
+  <meta name="theme-color" content="#05070b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span class="brand-copy">
+          <span class="brand-name">Viraj Patel Sankhla</span>
+          <span class="brand-role mono">Finance Portfolio</span>
+        </span>
+      </a>
 
-  <!--
-  ============================================================
-  NAV — How to edit
-  ============================================================
-  - To change your name in the nav bar: edit the text inside
-    <span class="nav-name"> and <span class="nav-monogram">
-  - To add a new nav link: copy one <li><a href="#section">Label</a></li>
-    and change the href to match the id of the section you want
-  - To update the LinkedIn URL: find class="nav-linkedin" and
-    change the href value
-  - To update the Resume link: find class="nav-cta" and change href
-  ============================================================
-  -->
-  <header class="site-header" id="top">
-    <nav class="navbar">
-      <div class="nav-logo">
-      <!--span class="nav-monogram">VPS</span-->
-        <span class="nav-name">Viraj Patel Sankhla</span>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+
       <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#research">Research</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="https://www.linkedin.com/in/s-viraj-patel/" class="nav-linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="assets/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume &darr;</a></li>
+        <li><a href="https://www.linkedin.com/in/s-viraj-patel/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <section class="hero" id="home">
+      <div class="hero-grid container">
+        <div class="hero-copy" data-reveal>
+          <h1 class="hero-title">Viraj Patel Sankhla</h1>
+          <p class="hero-headline">MSc Investment &amp; Financial Risk Management Student</p>
+          <p class="hero-summary">
+            I am a postgraduate finance student with grounding in financial markets, investment analysis, and risk concepts. My experience spans business operations, client-facing roles, and strategy consulting, and I am targeting graduate and internship opportunities across investment management, equity research, asset management, risk analytics, financial markets, and investment banking.
+          </p>
 
-    <!--
-    ============================================================
-    HERO SECTION — How to edit
-    ============================================================
-    PHOTO (located in the RIGHT column, above the intro text):
-    - Drop your photo into the assets/ folder and name it profile.jpg
-    - The neomorphic frame and placeholder auto-hide once the image loads
-    - Recommended: square crop, minimum 400x400px, professional headshot
-    - To remove: delete the entire <div class="hero-photo-wrap"> block in hero-right
-    - To update your name/role shown beside the photo: edit hero-photo-name and hero-photo-role
+          <div class="hero-actions">
+            <a class="btn btn-tertiary" href="https://www.linkedin.com/in/s-viraj-patel/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
 
-    NAME & LABEL:
-    - Edit the text inside <h1 class="hero-name"> for your name
-    - Edit <div class="hero-label mono"> for the programme label
-
-    THESIS PARAGRAPH:
-    - Edit the text inside <p class="hero-thesis"> — keep it 2–3 sentences
-
-    STATS (the three numbers):
-    - Each stat is a <div class="stat-item"> with a <span class="stat-value">
-      and <span class="stat-label mono">
-    - Change the numbers and labels as needed
-    - To add a 4th stat: copy a stat-item block and paste inside .hero-stats
-
-    META ROW (small text below stats):
-    - Each piece of info is a <span class="hmr-item mono">
-    - Edit the text inside each span
-    - The <span class="hmr-sep"> are just the | dividers between items
-
-    BUTTONS:
-    - Two buttons inside <div class="hero-actions">
-    - Change href values to update the Resume link and LinkedIn link
-    ============================================================
-    -->
-    <section class="hero" id="about">
-      <div class="hero-left">
-        <div class="hero-label mono">MSc Investment &amp; Financial Risk Management</div>
-        <h1 class="hero-name">Viraj<br>Patel<br><em>Sankhla</em></h1>
-        <div class="hero-actions">
-          <a href="assets/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download Resume</a>
-          <a href="https://www.linkedin.com/in/s-viraj-patel/" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+          <div class="hero-pills" aria-label="Key focus areas">
+            <span class="pill">Investment Research</span>
+            <span class="pill">Risk Analysis</span>
+            <span class="pill">Financial Markets</span>
+            <span class="pill">Client Operations</span>
+          </div>
         </div>
-      </div>
 
-      <div class="hero-right">
-        <!--
-        PHOTO: Drop profile.jpg into the assets/ folder.
-        The placeholder auto-hides when the image loads.
-        Change hero-photo-name and hero-photo-role text if needed.
-        -->
-        <div class="hero-photo-wrap">
-          <div class="hero-photo-frame">
-            <div class="hero-photo-placeholder" id="photoPlaceholder">
-              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="18" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                <path d="M6 42c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-              </svg>
-              <span>profile.jpg</span>
+        <aside class="hero-panel" data-reveal>
+          <div class="hero-photo-card">
+            <div class="hero-photo-frame">
+              <img src="assets/profile.jpg" alt="Viraj Patel Sankhla" class="hero-photo" loading="eager" decoding="async" />
             </div>
-            <img
-              src="assets/profile.jpg"
-              alt="Viraj Patel Sankhla"
-              class="hero-photo"
-              id="heroPhoto"
-              onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';"
-              onload="document.getElementById('photoPlaceholder').style.display='none'; this.style.display='block';"
-            />
+            <div class="hero-photo-copy">
+              <p class="hero-photo-kicker mono">Profile</p>
+              <p class="hero-photo-name">Viraj Patel Sankhla</p>
+              <p class="hero-photo-role">Finance postgraduate with retail, operations, and consulting experience</p>
+            </div>
           </div>
-          <div class="hero-photo-intro">
-            <div class="hero-photo-name">Viraj Patel Sankhla</div>
-            <div class="hero-photo-role mono">MSc Investment &amp; Financial Risk</div>
+
+          <div class="metric-grid">
+            <article class="metric-card">
+              <span class="metric-value">2026</span>
+              <span class="metric-label mono">Expected MSc completion</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-value">3</span>
+              <span class="metric-label mono">Certifications</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-value">5</span>
+              <span class="metric-label mono">Experience roles</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-value">2024</span>
+              <span class="metric-label mono">BBA Finance graduate</span>
+            </article>
           </div>
-        </div>
-        <p class="hero-thesis">
-          Finance postgraduate with a grounding in equity markets, investment analysis, and risk management. Currently completing an MSc at the University of Westminster, with hands-on experience in business operations, client-facing roles, and strategy consulting.
-        </p>
-        <div class="hero-stats">
-          <!--
-          STATS — to update a number or label, edit the text inside
-          stat-value and stat-label. Do not change the class names.
-          -->
-          <div class="stat-item">
-            <span class="stat-value">2026</span>
-            <span class="stat-label mono">Expected Graduation</span>
+
+          <div class="hero-note">
+            Targeting graduate and internship roles in investment management, equity research, asset management, risk analytics, financial markets, and investment banking.
           </div>
-          <div class="stat-item">
-            <span class="stat-value">7.94</span>
-            <span class="stat-label mono">Undergraduate GPA / 10</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">∞</span>
-            <span class="stat-label mono">Skill Learning</span>
-          </div>
-        </div>
-        <div class="hero-meta-row">
-          <span class="hmr-item mono">London, UK</span>
-          <span class="hmr-sep">|</span>
-          <span class="hmr-item mono">University of Westminster</span>
-          <span class="hmr-sep">|</span>
-          <span class="hmr-item mono">BMC Certified</span>
-        </div>
+        </aside>
       </div>
+
     </section>
 
-    <!-- TICKER — edit the <span> text items to change competency labels -->
-    <div class="hero-ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>EQUITY RESEARCH</span><span class="tdot">&#9632;</span>
-        <span>RISK MANAGEMENT</span><span class="tdot">&#9632;</span>
-        <span>INVESTMENT ANALYSIS</span><span class="tdot">&#9632;</span>
-        <span>FINANCIAL MODELLING</span><span class="tdot">&#9632;</span>
-        <span>PORTFOLIO CONSTRUCTION</span><span class="tdot">&#9632;</span>
-        <span>BLOOMBERG TERMINAL</span><span class="tdot">&#9632;</span>
-        <span>FUNDAMENTAL ANALYSIS</span><span class="tdot">&#9632;</span>
-        <span>STRATEGY CONSULTING</span><span class="tdot">&#9632;</span>
-        <span>EQUITY RESEARCH</span><span class="tdot">&#9632;</span>
-        <span>RISK MANAGEMENT</span><span class="tdot">&#9632;</span>
-        <span>INVESTMENT ANALYSIS</span><span class="tdot">&#9632;</span>
-        <span>FINANCIAL MODELLING</span><span class="tdot">&#9632;</span>
-        <span>PORTFOLIO CONSTRUCTION</span><span class="tdot">&#9632;</span>
-        <span>BLOOMBERG TERMINAL</span><span class="tdot">&#9632;</span>
-        <span>FUNDAMENTAL ANALYSIS</span><span class="tdot">&#9632;</span>
-        <span>STRATEGY CONSULTING</span><span class="tdot">&#9632;</span>
-      </div>
-    </div>
-
-    <!--
-    ============================================================
-    EDUCATION & CERTIFICATIONS — How to edit
-    ============================================================
-    ADDING A NEW DEGREE:
-    Copy this block and paste inside <div class="edu-entries">:
-
-      <div class="edu-entry">
-        <div class="edu-entry-year mono">YYYY – YYYY</div>
-        <div class="edu-entry-degree">Degree Name</div>
-        <div class="edu-entry-school">Institution · City · Grade (optional)</div>
-      </div>
-
-    ADDING A NEW CERTIFICATION:
-    Copy this block and paste inside <div class="cert-rows">:
-
-      <div class="cert-row">
-        <span class="cert-name">Certification Name</span>
-        <span class="cert-year mono">YYYY</span>
-      </div>
-
-    No style changes needed for either. The last cert-row automatically
-    loses its bottom border via CSS :last-child.
-    ============================================================
-    -->
-    <section class="edu-section">
+    <section class="section section--soft" id="about">
       <div class="container">
-        <div class="edu-grid">
+        <header class="section-header section-header--wide" data-reveal>
+          <p class="section-kicker mono">About</p>
+          <h2 class="section-title section-title--single-line">I focus on finance, markets, and disciplined analysis</h2>
+          <p class="section-lead">This summary reflects how I want to present myself for graduate and internship roles in finance.</p>
+        </header>
 
-          <div class="edu-block">
-            <span class="edu-block-label mono">Education</span>
-            <div class="edu-entries">
-              <div class="edu-entry">
-                <div class="edu-entry-year mono">2024 &ndash; 2026 (September)</div>
-                <div class="edu-entry-degree">MSc Investment &amp; Financial Risk Management</div>
-                <div class="edu-entry-school">University of Westminster &middot; London</div>
-              </div>
-              <div class="edu-entry">
-                <div class="edu-entry-year mono">2021 &ndash; 2024</div>
-                <div class="edu-entry-degree">Bachelor of Business Administration (Finance)</div>
-                <div class="edu-entry-school">ICFAI Business School &middot; Hyderabad &middot; 7.94/10</div>
-              </div>
-            </div>
-          </div>
+        <div class="about-grid">
+          <article class="content-card content-card--large" data-reveal>
+            <h3>Professional overview</h3>
+            <p>
+              I am an MSc Investment &amp; Financial Risk Management student at the University of Westminster with a background in finance, business operations, and client-facing work. My experience includes retail operations at TK Maxx, strategy consulting through a university micro-internship, business management in India, and entrepreneurship through an e-commerce venture.
+            </p>
+            <p>
+              I am positioning myself for graduate and internship opportunities in investment management, equity research, asset management, risk analytics, financial markets, and investment banking.
+            </p>
+          </article>
 
-          <div class="edu-divider-v"></div>
-
-          <div class="edu-block">
-            <span class="edu-block-label mono">Certifications</span>
-            <div class="cert-rows">
-              <div class="cert-row">
-                <span class="cert-name">Bloomberg Market Concepts</span>
-                <span class="cert-year mono">2026</span>
-              </div>
-              <div class="cert-row">
-                <span class="cert-name">Bloomberg Finance Fundamentals</span>
-                <span class="cert-year mono">2025</span>
-              </div>
-              <div class="cert-row">
-                <span class="cert-name">Prompt Engineering for Everyone &middot; Cognitive Class</span>
-                <span class="cert-year mono">2025</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!--
-    ============================================================
-    EXPERIENCE / TIMELINE — How to edit
-    ============================================================
-    ADDING A NEW ROLE:
-    Copy the entire block below and paste ABOVE the last .tl-item
-    (most recent roles go at the top). Fill in the details:
-
-      <div class="tl-item fade-in">
-        <div class="tl-left">
-          <div class="tl-dot"></div>
-          <div class="tl-line"></div>        ← remove this on the LAST item
-        </div>
-        <div class="tl-right">
-          <div class="tl-meta-row">
-            <span class="tl-date mono">Mon YYYY – Mon YYYY · X mo/yr</span>
-            <span class="tl-loc mono">City, Country</span>
-          </div>
-          <div class="tl-card">
-            <div class="tl-card-header">
-              <div class="tl-titles">
-                <div class="tl-role">Job Title</div>
-                <div class="tl-company">Company Name</div>
-              </div>
-              <span class="tl-badge tl-badge--TYPE">Label</span>
-            </div>
-            <ul class="tl-bullets">
-              <li>Bullet point one</li>
-              <li>Bullet point two</li>
+          <article class="content-card" data-reveal>
+            <h3>What I bring</h3>
+            <ul class="bullet-list">
+              <li>Financial markets, investment analysis, and risk concepts.</li>
+              <li>Business operations, sales tracking, and inventory accuracy.</li>
+              <li>Client service, teamwork, and communication under pressure.</li>
+              <li>Research discipline and structured problem solving.</li>
             </ul>
-          </div>
+          </article>
+
+          <article class="content-card" data-reveal>
+            <h3>Career direction</h3>
+            <ul class="bullet-list">
+              <li>Graduate roles in investment management and asset management.</li>
+              <li>Internship opportunities in finance and markets.</li>
+              <li>Equity research and financial analysis.</li>
+              <li>Risk analytics and financial markets.</li>
+              <li>Investment banking and related analytical roles.</li>
+            </ul>
+          </article>
         </div>
       </div>
+    </section>
 
-    BADGE TYPES (change tl-badge--TYPE to one of):
-      tl-badge--current     gold tint   — use for present roles
-      tl-badge--consulting  blue tint   — consulting / advisory
-      tl-badge--finance     teal tint   — fintech / banking
-      tl-badge--venture     green tint  — entrepreneurship / startups
-
-    To use NO badge: remove the <span class="tl-badge..."> line entirely.
-
-    IMPORTANT: The LAST .tl-item in the list should NOT have
-    <div class="tl-line"></div> inside tl-left, so the vertical
-    line doesn't extend past the final entry.
-    ============================================================
-    -->
-    <section class="section" id="experience">
+    <section class="section section--ink" id="education">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label mono">Career</span>
-          <h2 class="section-title">Experience</h2>
-        </div>
+        <header class="section-header" data-reveal>
+          <p class="section-kicker mono">Education</p>
+          <h2 class="section-title">Education timeline</h2>
+          <p class="section-lead">My current academic background and certifications.</p>
+        </header>
 
         <div class="timeline">
-
-          <!-- EXPERIENCE ENTRY: Strategy Consultant -->
-          <div class="tl-item fade-in">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-right">
-              <div class="tl-meta-row">
-                <span class="tl-date mono">Jun 2026 &middot; 2 weeks</span>
-                <span class="tl-loc mono">London, UK</span>
-              </div>
-              <div class="tl-card">
-                <div class="tl-card-header">
-                  <div class="tl-titles">
-                    <div class="tl-role">Strategy Consultant</div>
-                    <div class="tl-company">Practera / Tiraverse Ltd &middot; University of Westminster Micro-Internship</div>
-                  </div>
-                  <span class="tl-badge tl-badge--consulting">Consulting</span>
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <p class="timeline-date mono">Expected Sept 2026</p>
+                  <h3>MSc Investment &amp; Financial Risk Management</h3>
+                  <p class="timeline-org">University of Westminster, London</p>
                 </div>
-                <ul class="tl-bullets">
-                  <li>Completed a 2-week experiential micro-internship programme facilitated by the University of Westminster, embedded as part of a five-person advisory team working with a real London-based B2B SaaS start-up</li>
-                  <li>Developed a go-to-market strategy, conducting secondary research across the UK B2B SaaS landscape and producing data-driven financial benchmarks to contextualise the client's competitive position</li>
-                </ul>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- EXPERIENCE ENTRY: TK Maxx -->
-          <div class="tl-item fade-in">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-right">
-              <div class="tl-meta-row">
-                <span class="tl-date mono">Nov 2025 &ndash; Present &middot; 7 mo</span>
-                <span class="tl-loc mono">London, UK</span>
-              </div>
-              <div class="tl-card">
-                <div class="tl-card-header">
-                  <div class="tl-titles">
-                    <div class="tl-role">Associate</div>
-                    <div class="tl-company">TK Maxx</div>
-                  </div>
-                  <span class="tl-badge tl-badge--current">Current</span>
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <p class="timeline-date mono">Graduated 2024</p>
+                  <h3>Bachelor of Business Administration (Finance)</h3>
+                  <p class="timeline-org">ICFAI Business School, Hyderabad</p>
                 </div>
-                <p class="tl-desc">Part-time role alongside postgraduate studies, involving customer operations and team coordination in a high-volume retail environment.</p>
               </div>
             </div>
-          </div>
+          </article>
+        </div>
 
-          <!-- EXPERIENCE ENTRY: Business Manager -->
-          <div class="tl-item fade-in">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-right">
-              <div class="tl-meta-row">
-                <span class="tl-date mono">Aug 2024 &ndash; Aug 2025 &middot; 1 yr</span>
-                <span class="tl-loc mono">London, UK</span>
-              </div>
-              <div class="tl-card">
-                <div class="tl-card-header">
-                  <div class="tl-titles">
-                    <div class="tl-role">Business Manager</div>
-                    <div class="tl-company">Godavari Hi-Teak Doors</div>
-                  </div>
-                </div>
-                <ul class="tl-bullets">
-                  <li>Oversaw financial records, daily sales tracking, and inventory management, with direct P&amp;L oversight and operational budgeting</li>
-                  <li>Managed client relationships and led pricing negotiations to achieve business targets</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- EXPERIENCE ENTRY: Fxmtrack -->
-          <div class="tl-item fade-in">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-right">
-              <div class="tl-meta-row">
-                <span class="tl-date mono">Jun 2023 &ndash; Jul 2023 &middot; 2 mo</span>
-                <span class="tl-loc mono">Remote</span>
-              </div>
-              <div class="tl-card">
-                <div class="tl-card-header">
-                  <div class="tl-titles">
-                    <div class="tl-role">Marketing &amp; Management Intern</div>
-                    <div class="tl-company">Fxmtrack Financials</div>
-                  </div>
-                  <span class="tl-badge tl-badge--finance">Fintech</span>
-                </div>
-                <ul class="tl-bullets">
-                  <li>Supported client acquisition through data-driven campaigns in a trading-adjacent fintech environment</li>
-                  <li>Gained exposure to financial products and client servicing workflows, informing interest in investment analysis</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- EXPERIENCE ENTRY: Foreverteen (LAST — no tl-line) -->
-          <div class="tl-item fade-in">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <!-- No tl-line here: this is the last entry -->
-            </div>
-            <div class="tl-right">
-              <div class="tl-meta-row">
-                <span class="tl-date mono">Jun 2022 &ndash; Jul 2023 &middot; 1 yr 1 mo</span>
-                <span class="tl-loc mono">India</span>
-              </div>
-              <div class="tl-card">
-                <div class="tl-card-header">
-                  <div class="tl-titles">
-                    <div class="tl-role">Founder</div>
-                    <div class="tl-company">Foreverteen.in</div>
-                  </div>
-                  <span class="tl-badge tl-badge--venture">Entrepreneurship</span>
-                </div>
-                <ul class="tl-bullets">
-                  <li>Built and managed an online retail business, handling finances, budgets, and digital marketing independently</li>
-                  <li>Developed practical skills in cash flow management, decision-making, and entrepreneurial P&amp;L responsibility</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
+        <div class="cert-grid">
+          <article class="cert-card" data-reveal>
+            <p class="cert-year mono">2026</p>
+            <h3>Bloomberg Market Concepts</h3>
+            <p class="muted">Market terminology, data, and financial analysis foundations.</p>
+          </article>
+          <article class="cert-card" data-reveal>
+            <p class="cert-year mono">2025</p>
+            <h3>Bloomberg Finance Fundamentals</h3>
+            <p class="muted">Finance fundamentals focused on markets, valuation, and decision making.</p>
+          </article>
+          <article class="cert-card" data-reveal>
+            <p class="cert-year mono">2025</p>
+            <h3>Prompt Engineering for Everyone</h3>
+            <p class="muted">Practical AI prompting for analysis, research, and productivity workflows.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!--
-    ============================================================
-    RESEARCH & PROJECTS — How to edit
-    ============================================================
-    WHEN YOU HAVE A NEW PROJECT TO ADD:
-    1. Copy one <div class="rc-card"> block below
-    2. Paste it BEFORE the research-empty div (published work goes first)
-    3. Fill in rc-type, rc-title, rc-desc, and rc-link
-    4. Change rc-tag text to match the category
-    5. If you have a PDF or link: set href on the <a class="rc-link"> tag
-       If no link yet: remove the <a> tag entirely
-
-    Project card template:
-
-      <div class="rc-card fade-in">
-        <div class="rc-card-top">
-          <span class="rc-type mono">CATEGORY</span>
-          <span class="rc-tag">Tag Label</span>
-        </div>
-        <h3 class="rc-title">Project Title</h3>
-        <p class="rc-desc">
-          Short description of what the project covers, methodology used,
-          and any key findings. 2–3 sentences is ideal.
-        </p>
-        <div class="rc-footer">
-          <span class="rc-meta mono">Month YYYY &middot; University of Westminster</span>
-          <a href="assets/your-file.pdf" class="rc-link" target="_blank" rel="noopener">View Report &rarr;</a>
-        </div>
-      </div>
-
-    RC-TYPE examples: "Equity Research", "Financial Model",
-      "Risk Analysis", "Semester Project", "Market Notes", "Dissertation"
-
-    WHEN ALL WORK IS PUBLISHED: delete the <div class="research-empty">
-    block entirely. The grid will fill naturally.
-
-    ADDING A NEW CATEGORY TAG:
-    The rc-tag uses no modifier class — just change the text inside.
-    Tag colour is set globally in style.css and does not need editing.
-    ============================================================
-    -->
-    <section class="section section--alt" id="research">
+    <section class="section section--soft" id="experience">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label mono">Academic Work</span>
-          <h2 class="section-title">Research &amp; Projects</h2>
-          <p class="section-sub">Published work from the MSc programme. Added as each piece is finalised, not as placeholders.</p>
-        </div>
+        <header class="section-header" data-reveal>
+          <p class="section-kicker mono">Experience</p>
+          <h2 class="section-title">Professional timeline</h2>
+          <p class="section-lead">My recent roles across finance-adjacent work, operations, and consulting.</p>
+        </header>
 
-        <div class="rc-grid">
+        <div class="timeline timeline--experience">
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <p class="timeline-date mono">Jun 2026 · 2 weeks · Remote</p>
+                  <h3>Strategy Consultant</h3>
+                  <p class="timeline-org">Practera / Tiraverse Ltd, University of Westminster micro-internship</p>
+                </div>
+                <span class="badge badge--blue">Consulting</span>
+              </div>
+              <ul class="bullet-list">
+                <li>Contributed to a five-person advisory team supporting a London-based B2B SaaS start-up.</li>
+                <li>Built a go-to-market strategy using secondary research and financial benchmarking across the UK SaaS landscape.</li>
+              </ul>
+            </div>
+          </article>
 
-          <!-- PUBLISHED PROJECT EXAMPLE -->
-          <!-- Replace this with your actual Semester 1 / 2 projects -->
-          <div class="rc-card fade-in">
-            <div class="rc-card-top">
-              <span class="rc-type mono">Case Study</span>
-              <span class="rc-tag">Financial Analysis</span>
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <p class="timeline-date mono">Oct 2025 · Present · White City, London</p>
+                  <h3>Associate</h3>
+                  <p class="timeline-org">TK Maxx</p>
+                </div>
+                <span class="badge badge--gold">Current</span>
+              </div>
+              <ul class="bullet-list">
+                <li>Delivered customer service in a fast-paced retail environment while balancing postgraduate study.</li>
+                <li>Handled transactions and store operations with accuracy, adaptability, and prioritisation under pressure.</li>
+              </ul>
             </div>
-            <h3 class="rc-title">Rotork plc: Financial Statement Analysis, FY2025</h3>
-            <p class="rc-desc">
-              Peer comparative analysis of Rotork plc (FTSE 250) against IMI plc across profitability, liquidity, efficiency, and solvency ratios. Part II evaluates earnings quality, cash flow backing, Beneish M-Score, and reporting practices under IFRS. Rotork's 101% cash conversion and 38.4% ROCE are assessed against IMI's stronger aftermarket weighting and tighter adjusted-to-statutory gap.
-            </p>
-            <div class="rc-footer">
-            <span class="rc-meta mono">Advanced Financial Statements Analysis &middot; University of Westminster</span>
-                <!-- Uncomment and update href when PDF is ready to share -->
-                <!-- <a href="assets/rotork-financial-analysis.pdf" class="rc-link" target="_blank" rel="noopener">View Report &rarr;</a> -->
-            </div>
-          </div>
+          </article>
 
-          <!-- EMPTY STATE — delete this block once research section is full -->
-          <div class="research-empty fade-in">
-            <div class="empty-icon">
-              <svg width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="5" y="7" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                <rect x="10" y="3" width="26" height="32" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.35"/>
-                <line x1="11" y1="16" x2="24" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="11" y1="21" x2="24" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="11" y1="26" x2="18" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <p class="timeline-date mono">Aug 2024 · Aug 2025 · Telangana, India</p>
+                  <h3>Business Manager</h3>
+                  <p class="timeline-org">Godavari Hi-Teak Doors</p>
+                </div>
+              </div>
+              <ul class="bullet-list">
+                <li>Managed financial records, daily sales monitoring, and inventory accuracy to support business operations.</li>
+                <li>Handled client relationships and pricing discussions to help achieve business targets.</li>
+              </ul>
             </div>
-            <h3 class="empty-title">More work being added</h3>
-            <p class="empty-text">Equity research reports, additional semester projects, and the dissertation will appear here as they are completed.</p>
-            <div class="empty-tags">
-              <span class="empty-tag">Equity Research</span>
-              <span class="empty-tag">Dissertation</span>
-              <span class="empty-tag">Financial Models</span>
-              <span class="empty-tag">Risk Frameworks</span>
-            </div>
-          </div>
+          </article>
 
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <p class="timeline-date mono">Jul 2023 · 1 month · Remote</p>
+                  <h3>Marketing and Management Intern</h3>
+                  <p class="timeline-org">Fxmtrack Financials</p>
+                </div>
+                <span class="badge badge--blue">Fintech</span>
+              </div>
+              <ul class="bullet-list">
+                <li>Supported client acquisition through data-driven marketing activity.</li>
+                <li>Worked with the team on client servicing workflows and gained exposure to financial products.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <p class="timeline-date mono">Jun 2022 · Jul 2023 · Remote</p>
+                  <h3>Founder</h3>
+                  <p class="timeline-org">Foreverteen.in</p>
+                </div>
+                <span class="badge badge--gold">Entrepreneurship</span>
+              </div>
+              <ul class="bullet-list">
+                <li>Built and managed an online retail business with responsibility for budgeting, cash flow, marketing, and day-to-day operations.</li>
+                <li>Strengthened entrepreneurship, decision-making, and cash management skills through direct ownership of the business.</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!--
-    ============================================================
-    SKILLS — How to edit
-    ============================================================
-    ADDING A NEW SKILL TAG:
-    Inside any <div class="skill-tags">, copy one of these and paste:
-
-      <span class="stag">Skill Name</span>               ← plain/grey
-      <span class="stag stag--primary">Skill Name</span> ← navy filled (technical tools)
-      <span class="stag stag--accent">Skill Name</span>  ← gold tint (finance/analytical)
-
-    ADDING A NEW SKILL GROUP:
-    Copy this block and paste inside either .skill-col:
-
-      <div class="skill-group">
-        <div class="skill-group-label mono">Group Label</div>
-        <div class="skill-tags">
-          <span class="stag">Tag One</span>
-          <span class="stag">Tag Two</span>
-        </div>
-      </div>
-
-    Do not change any class names. Only edit text content.
-    ============================================================
-    -->
-    <section class="section" id="skills">
+    <section class="section section--ink" id="skills">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label mono">Capabilities</span>
-          <h2 class="section-title">Skills &amp; Tools</h2>
-        </div>
-        <div class="skills-layout">
+        <header class="section-header section-header--wide" data-reveal>
+          <p class="section-kicker mono">Skills</p>
+          <h2 class="section-title section-title--single-line">Core finance, analysis, and professional skills</h2>
+          <p class="section-lead">The skills below reflect what I can already discuss and demonstrate.</p>
+        </header>
 
-          <div class="skill-col">
-            <div class="skill-group">
-              <div class="skill-group-label mono">Technical Tools</div>
-              <div class="skill-tags">
-                <span class="stag stag--primary">Bloomberg Terminal</span>
-                <span class="stag stag--primary">MS Excel</span>
-                <span class="stag stag--primary">PowerPoint</span>
-                <span class="stag stag--primary">Digital Marketing Tools</span>
-              </div>
+        <div class="skills-grid">
+          <article class="skill-card skill-card--gold" data-reveal>
+            <p class="skill-label mono">Financial Analysis</p>
+            <h3>Investment research and core analysis</h3>
+            <div class="chip-row">
+              <span class="chip">Investment Research</span>
+              <span class="chip">Fundamental Analysis</span>
+              <span class="chip">Market Research</span>
+              <span class="chip">Financial Statement Analysis</span>
+              <span class="chip">Data Analysis</span>
             </div>
-            <div class="skill-group">
-              <div class="skill-group-label mono">Financial &amp; Analytical</div>
-              <div class="skill-tags">
-                <span class="stag stag--accent">Investment Research</span>
-                <span class="stag stag--accent">Fundamental Analysis</span>
-                <span class="stag stag--accent">Financial Modelling</span>
-                <span class="stag stag--accent">Budgeting</span>
-              </div>
-            </div>
-          </div>
+          </article>
 
-          <div class="skill-col">
-            <div class="skill-group">
-              <div class="skill-group-label mono">Core Competencies</div>
-              <div class="skill-tags">
-                <span class="stag">Leadership</span>
-                <span class="stag">Teamwork</span>
-                <span class="stag">Communication</span>
-                <span class="stag">Problem Solving</span>
-                <span class="stag">Time Management</span>
-              </div>
+          <article class="skill-card skill-card--blue" data-reveal>
+            <p class="skill-label mono">Risk Management</p>
+            <h3>Risk concepts with structured decision making</h3>
+            <div class="chip-row">
+              <span class="chip">Risk Analysis</span>
+              <span class="chip">Analytical Thinking</span>
+              <span class="chip">Problem Solving</span>
+              <span class="chip">Prioritisation</span>
             </div>
-            <div class="skill-group">
-              <div class="skill-group-label mono">Languages</div>
-              <div class="skill-tags">
-                <span class="stag">English</span>
-                <span class="stag">Hindi</span>
-                <span class="stag">Gujarati</span>
-                <span class="stag">Telugu</span>
-              </div>
-            </div>
-          </div>
+          </article>
 
+          <article class="skill-card" data-reveal>
+            <p class="skill-label mono">Financial Tools</p>
+            <h3>Financial tools and platforms</h3>
+            <div class="chip-row">
+              <span class="chip">Bloomberg Terminal (Basic)</span>
+              <span class="chip">Bloomberg Market Concepts</span>
+              <span class="chip">Bloomberg Finance Fundamentals</span>
+              <span class="chip">Microsoft Excel (Intermediate)</span>
+              <span class="chip">AI Tools</span>
+            </div>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <p class="skill-label mono">Professional Strengths</p>
+            <h3>Client-facing and team-oriented execution</h3>
+            <div class="chip-row">
+              <span class="chip">Teamwork</span>
+              <span class="chip">Communication</span>
+              <span class="chip">Time Management</span>
+              <span class="chip">Adaptability</span>
+            </div>
+          </article>
+
+          <article class="skill-card skill-card--soft" data-reveal>
+            <p class="skill-label mono">Language</p>
+            <h3>Communication across four languages</h3>
+            <div class="chip-row">
+              <span class="chip">English</span>
+              <span class="chip">Hindi</span>
+              <span class="chip">Gujarati</span>
+              <span class="chip">Telugu</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
   </main>
-
-  <!--
-  FOOTER — edit footer-copy text for copyright year/name
-  LinkedIn href is the only link here — update if your URL changes
-  -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-copy mono">&copy; 2026 Viraj Patel Sankhla</span>
-        <span class="footer-note">MSc Investment &amp; Financial Risk Management &middot; University of Westminster</span>
-        <a href="https://www.linkedin.com/in/s-viraj-patel/" class="footer-linkedin" target="_blank" rel="noopener">LinkedIn &rarr;</a>
-      </div>
-    </div>
-  </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
